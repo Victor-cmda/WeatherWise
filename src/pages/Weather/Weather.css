@@ -7,6 +7,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.weather-container {
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    padding-bottom: 160px;
+}
+
 body {
     background-color: #333333;
 }
@@ -26,7 +38,7 @@ body {
     align-items: center;
 }
 
-input {
+.weather_input {
     border: none;
     background: #242424;
     outline: none;

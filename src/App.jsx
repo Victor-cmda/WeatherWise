@@ -15,10 +15,12 @@ function App() {
     <Router>
       <Menu />
       <Routes>
-        <Route path="/" exact element={<Home/>} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/weather" element={<Weather title="Aplicativo" />} />
         <Route path="/contact" element={<Contact title="Contato" />} />
         <Route path="/about" element={<About title="Sobre" />} />
+        <Route exact path="/victorHugo" element={<Home />}></Route>
+        <Route path="*" element={<Home />}></Route>
       </Routes>
       <Footer />
     </Router>

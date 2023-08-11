@@ -1,16 +1,26 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faInfoCircle, faEnvelope, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faInfoCircle, faEnvelope, faEarthAmericas, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 
 function Menu() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className="menu">
-      <div className="logo-container">
-        <img src="/WeatherIconBlack-removebg-preview.png" alt="Logo" className="logo-image" />
-        <div className="logo-text">WeatherWise</div>
+    <nav className={`menu ${isMenuOpen ? 'active' : ''} ${window.innerWidth >= 768 ? 'hidden-menu' : ''}`}>
+      <div>
+        <div className="logo-container">
+          <img src="/WeatherIconBlack-removebg-preview.png" alt="Logo" className="logo-image" />
+          <div className="logo-text">WeatherWise</div>
+          <FontAwesomeIcon onClick={toggleMenu} icon={faBarsStaggered} size="2x" className="menu-toggle fa-ul fa-bounce" />
+        </div>
       </div>
+
       <ul className="menu-list">
         <li className="menu-item">
           <Link to="/" className="menu-link">

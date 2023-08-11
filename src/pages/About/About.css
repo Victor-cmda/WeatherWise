@@ -1,11 +1,12 @@
 .about-container {
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 40px;
     background-color: #2e2e2e;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     color: white;
+    padding-bottom: 150px;
   }
   
   .about-title {

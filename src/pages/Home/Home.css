@@ -9,6 +9,7 @@
     align-items: center;
     position: relative;
     color: white;
+    padding-bottom: 100px;
 }
 
 .home-gif img {
@@ -52,4 +53,18 @@
 
 .cta-button:hover {
     background-color: #20618b;
+}
+
+@media screen and (max-width: 768px) {
+    .home-container {
+        display: inline-block;
+    }
+
+    .home-content {
+        text-align: center;
+        margin: 170px auto;
+    }
+    .home-gif{
+        margin: -140px auto;
+    }
 }
